@@ -40,6 +40,8 @@ class App extends React.Component {
         <Deck
           data={DATA}
           renderCard={this.renderCard}
+          onSwipeRight={item => console.log(item)}
+          onSwipeLeft={item => console.log(item)}
         />
       </View>
     );
