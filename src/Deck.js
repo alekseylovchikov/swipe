@@ -77,6 +77,9 @@ class Deck extends Component {
 
 	renderCards() {
 		const { index: currentIndex } = this.state;
+
+		if (currentIndex >= this.props.data.length) return this.props.renderNoMoreCards();
+
 		return this.props.data.map((card, index) => {
 			if (index < currentIndex) return null;
 			if (index === currentIndex) {
